@@ -58,7 +58,8 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
                     event.preventDefault()
                     var n = sound[index].cloneNode()
                     n.play()
-                    var idElement = sound[index].src.split("/")[6].split(".")[0]
+                    var srcArray = sound[index].src.split("/")
+                    idElement = srcArray[srcArray.length - 1].split(".")[0]
                     $("#" + idElement).addClass("active")
                 }
             }
@@ -81,7 +82,8 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
                     n.volume = 0.35
                     n.playbackRate = 2
                     n.play()
-                    var idElement = sound[index].src.split("/")[6].split(".")[0]
+                    var srcArray = sound[index].src.split("/")
+                    idElement = srcArray[srcArray.length - 1].split(".")[0]
                     $("#" + idElement).addClass("active")
                 }
             }
