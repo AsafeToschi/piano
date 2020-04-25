@@ -59,7 +59,7 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
                     var n = sound[index].cloneNode()
                     n.play()
                     var srcArray = sound[index].src.split("/")
-                    idElement = srcArray[srcArray.length - 1].split(".")[0]
+                    var idElement = srcArray[srcArray.length - 1].split(".")[0]
                     $("#" + idElement).addClass("active")
                 }
             }
@@ -83,7 +83,7 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
                     n.playbackRate = 2
                     n.play()
                     var srcArray = sound[index].src.split("/")
-                    idElement = srcArray[srcArray.length - 1].split(".")[0]
+                    var idElement = srcArray[srcArray.length - 1].split(".")[0]
                     $("#" + idElement).addClass("active")
                 }
             }
@@ -95,7 +95,7 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
 
 
             var srcArray = sound[index].src.split("/")
-            idElement = srcArray[srcArray.length - 1].split(".")[0]
+            vvar idElement = srcArray[srcArray.length - 1].split(".")[0]
             $("#" + idElement).removeClass("active")
         })
 
@@ -105,7 +105,7 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
 
 
             var srcArray = sound[index].src.split("/")
-            idElement = srcArray[srcArray.length - 1].split(".")[0]
+            vvar idElement = srcArray[srcArray.length - 1].split(".")[0]
             $("#" + idElement).removeClass("active")
         })
     })
