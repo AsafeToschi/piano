@@ -17,6 +17,35 @@ html, body{
     height: 100%;
     width: 100%;
     background-image: radial-gradient( #00708a, #071e3b);
+    #menu{
+        position: relative;
+        width: 300px;
+        height: 50px;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #e6f5f918;
+        border: 2px solid #e6f5f9;
+        border-radius: 3px;
+        border-top: none;
+        box-shadow: 0px 0px 10px 0px #91dbecaa, inset 0px 0px 10px 0px #91dbecaa;
+        ul{
+            list-style: none;
+            font-family: sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            li{
+                position: relative;
+                color: #e6f5f9;
+                display: inline-flex;
+                align-items: center;
+                height: 100%;
+                text-shadow: 0px 0px 10px #91dbec;
+
+            }
+        }
+    }
     .piano-container{
         position: absolute;
         left: 50%;
@@ -33,7 +62,7 @@ html, body{
                 float: left;
                 position: relative;
                 .tile{
-                    transition: 0.2s ease;
+                    transition: 0.05s ease;
                     &.white{
                         position: relative;
                         height: 100%;
@@ -45,6 +74,9 @@ html, body{
                         border-right: 3px solid #e6f5f9;
                         &:hover{    
                             background: #e6f5f922;
+                        }
+                        &.active{
+                            background: #e6f5f944;
                         }
                         .activation-key{
                             position: absolute;
@@ -68,6 +100,10 @@ html, body{
                         z-index: 1;
                         &:hover{    
                             background: darken(#e6f5f9, 15);
+                        }
+                        &.active{
+                            background: darken(#e6f5f9, 15);
+
                         }
                         .activation-key{
                             position: absolute;

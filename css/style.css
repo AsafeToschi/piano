@@ -15,6 +15,34 @@ html, body {
   width: 100%;
   background-image: radial-gradient(#00708a, #071e3b);
 }
+#content #menu {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e6f5f918;
+  border: 2px solid #e6f5f9;
+  border-radius: 3px;
+  border-top: none;
+  box-shadow: 0px 0px 10px 0px #91dbecaa, inset 0px 0px 10px 0px #91dbecaa;
+}
+#content #menu ul {
+  list-style: none;
+  font-family: sans-serif;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#content #menu ul li {
+  position: relative;
+  color: #e6f5f9;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  text-shadow: 0px 0px 10px #91dbec;
+}
 #content .piano-container {
   position: absolute;
   left: 50%;
@@ -34,7 +62,7 @@ html, body {
   position: relative;
 }
 #content .piano-container #piano [id*=escala] .tile {
-  transition: 0.2s ease;
+  transition: 0.05s ease;
 }
 #content .piano-container #piano [id*=escala] .tile.white {
   position: relative;
@@ -48,6 +76,9 @@ html, body {
 }
 #content .piano-container #piano [id*=escala] .tile.white:hover {
   background: #e6f5f922;
+}
+#content .piano-container #piano [id*=escala] .tile.white.active {
+  background: #e6f5f944;
 }
 #content .piano-container #piano [id*=escala] .tile.white .activation-key {
   position: absolute;
@@ -70,6 +101,9 @@ html, body {
   z-index: 1;
 }
 #content .piano-container #piano [id*=escala] .tile.black:hover {
+  background: #a8dcea;
+}
+#content .piano-container #piano [id*=escala] .tile.black.active {
   background: #a8dcea;
 }
 #content .piano-container #piano [id*=escala] .tile.black .activation-key {
