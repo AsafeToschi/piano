@@ -95,7 +95,7 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
 
 
             var srcArray = sound[index].src.split("/")
-            vvar idElement = srcArray[srcArray.length - 1].split(".")[0]
+            var idElement = srcArray[srcArray.length - 1].split(".")[0]
             $("#" + idElement).removeClass("active")
         })
 
@@ -105,7 +105,7 @@ $("#piano div[id^=escala_] div.tile").each(function (index) {
 
 
             var srcArray = sound[index].src.split("/")
-            vvar idElement = srcArray[srcArray.length - 1].split(".")[0]
+            var idElement = srcArray[srcArray.length - 1].split(".")[0]
             $("#" + idElement).removeClass("active")
         })
     })
